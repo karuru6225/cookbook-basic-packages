@@ -1,11 +1,15 @@
 case platform
 	when "centos", "amazon"
 		default['basic-packages']['packages'] = [
-			{ :name =>  "man", :arch => nil },
-			{ :name =>  "wget", :arch => nil },
-			{ :name =>  "unzip", :arch => nil },
+			{ :name =>  "man" },
+			{ :name =>  "wget" },
+			{ :name =>  "unzip" },
 		]
 	when "debian", "ubuntu"
 		default['basic-packages']['packages'] = [
+			{ :name =>  "man" },
+			{ :name =>  "curl" },
+			{ :name =>  "unzip" },
+			{ :name =>  "at" },
 		]
 end

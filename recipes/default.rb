@@ -6,13 +6,11 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-case node[:platform]
-when "centos", "amazon"
-	node['basic-packages']['packages'].each{|value|
-		yum_package value[:name] do
-			arch value[:arch]
-			action :install
-		end
-	}
-end
+
+node['basic-packages']['packages'].each{|value|
+	package value[:name] do
+		action :install
+	end
+}
+
 
