@@ -4,7 +4,6 @@ case platform
 			{ :name =>  "man" },
 			{ :name =>  "wget" },
 			{ :name =>  "unzip" },
-			{ :name =>  "openssh-server" },
 		]
 	when "debian", "ubuntu"
 		default['basic-packages']['packages'] = [
