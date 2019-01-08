@@ -1,5 +1,5 @@
 case platform
-	when "centos", "amazon"
+	when "centos", "amazon", "redhat"
 		default['basic-packages']['packages'] = [
 			{ :name =>  "man" },
 			{ :name =>  "wget" },
